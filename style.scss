@@ -1,3 +1,68 @@
+@use "sass:color";
+
+$primary: #5f82ff;
+$primary-darkened: hsl(223, 80%, 60%);
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 :root {
-    $primary: #5f82ff;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    padding: 0 2rem;
+    
+    box-shadow: 0px 0px 10px 1px #EEEEEE;
+
+    .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $primary;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary-darkened;
+        }
+    }
+
+    .buttons {
+        margin-left: auto;
+        & a:first-child {
+            margin-right: 0.5rem;
+        }
+
+        .primary-button, .secondary-button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        .primary-button {
+            background-color: $primary;
+            color: #EEEEEE;
+
+            &:hover {
+                background-color: $primary-darkened;
+            }
+        }
+
+        .secondary-button {
+            // Box shadow is used for inset borders, its color defaults to color ($primary)
+            box-shadow: inset 0 0 0 2px;
+            color: $primary;
+
+            &:hover {
+                color: $primary-darkened;
+            }
+        }
+    }
 }
