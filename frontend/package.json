@@ -1,5 +1,6 @@
 {
-  "name": "vite-starter",
+  "name": "nim-frontend",
+  "description": "Frontend for Nim, created with React and Sass.",
   "private": true,
   "version": "0.0.0",
   "type": "module",
