@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../_variables.scss" as *;
 
 nav {
@@ -6,7 +7,7 @@ nav {
     align-items: center;
     padding: 0 2rem;
     
-    box-shadow: 0px 0px 10px 1px #EEEEEE;
+    box-shadow: 0px 0px 10px 1px transparentize(desaturate($primary, 80%), 0.7);
 
     .logo {
         display: flex;
